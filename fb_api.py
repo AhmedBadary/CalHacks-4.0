@@ -6,10 +6,11 @@ token = "EAACEdEose0cBANfFvfniSYtu2sjnoxA5VvPqxZAgi8Gs9F3zGM3p79mDPKxt9XKGGZA86T
 
 graph = facebook.GraphAPI(access_token=token)
 fields = 'link,images'
+# This id is currently hardcoded
 post = graph.get_object(id=10154781019457991, fields = fields)
 link = post['images'][0]['source']
 
-def get_image_from_url(url):
+def save_image_from_url(url):
 
 	resource = urllib.urlopen(url)
 	output = open("file01.jpg","wb")
