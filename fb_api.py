@@ -45,6 +45,7 @@ def get_url_from_fb_photo(photo):
     url = img['images'][0]['source']
     return url
 
+
 all_photos = graph.get_connections(id='me', connection_name='photos')
 all_photos = all_photos['data']
 p1 = all_photos[0]

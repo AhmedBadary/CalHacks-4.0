@@ -17,7 +17,6 @@ params = urllib.urlencode({
 })
 
 
-
 def get_msft_data(url):
 
     # The URL of a JPEG image to analyze.
