@@ -22,7 +22,7 @@ def get_msft_data(url):
 
     # The URL of a JPEG image to analyze.
     body = "{'url':'" + url + "'}"
-    body = "{'url':'https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg'}"
+    #body = "{'url':'https://upload.wikimedia.org/wikipedia/commons/c/c3/RH_Louise_Lillian_Gish.jpg'}"
 
     try:
         # Execute the REST API call and get the response.
@@ -37,7 +37,10 @@ def get_msft_data(url):
     except Exception as e:
         print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
-
+def print_data(data):
+    parsed = json.loads(data)
+    print ("Response:")
+    print (json.dumps(parsed, sort_keys=True, indent=2))
 
 
 
